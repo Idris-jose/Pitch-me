@@ -55,7 +55,7 @@ export default function PerformanceChart({
             </div>
 
             {/* Chart area */}
-            <div className="relative flex items-end gap-2 h-52 pt-6 z-10">
+            <div className="relative border-1 border-[#2a2f3f] rounded-lg p-4 flex items-end gap-1 h-52 pt-6 z-10">
                 {data.map((d, i) => {
                     const today = isToday(d);
                     return (
@@ -67,7 +67,7 @@ export default function PerformanceChart({
                             <div className="relative flex flex-col items-center justify-end w-full h-full">
                                 {/* Percentage label on top (today only) */}
                                 {today && (
-                                    <span className="absolute -top-1 left-1/2 -translate-x-1/2 text-[11px] font-semibold text-white bg-indigo-500 px-2 py-0.5 rounded-full whitespace-nowrap z-10 shadow-md">
+                                    <span className="absolute -top-1 left-1/2 -translate-x-1/2 text-[11px] font-semibold text-white bg-indigo-500 px-2 py-0.5 rounded-full whitespace-nowrap z-10 shadow-lg">
                                         {d.value}%
                                     </span>
                                 )}
@@ -75,8 +75,8 @@ export default function PerformanceChart({
                                 {/* Bar */}
                                 <div
                                     className={`w-full rounded-lg transition-all duration-700 ease-out ${today
-                                            ? "bg-indigo-500"
-                                            : "bg-[#2d3651]"
+                                            ? "bg-indigo-500 shadow-lg shadow-indigo-800"
+                                            : "bg-[#2d3651] shadow-lg shadow-[#2d3651]"
                                         }`}
                                     style={{
                                         height: mounted ? `${d.value}%` : "0%",

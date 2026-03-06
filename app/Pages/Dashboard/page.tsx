@@ -2,6 +2,8 @@ import Header from "@/app/components/Common/Header";
 import MetricCard from "@/app/components/Dashboard/MetricCard";
 import PerformanceChart from "@/app/components/Dashboard/PerformanceChart";
 import RecentSessions from "@/app/components/Dashboard/RecentSessions";
+import WeeklyGoals from "@/app/components/Dashboard/WeeklyGoals";
+import DailyTip from "@/app/components/Dashboard/DailyTip";
 import { Sparkles, Lightbulb, AudioLines, TrendingUp } from "lucide-react";
 
 export default function Dashboard() {
@@ -52,6 +54,12 @@ export default function Dashboard() {
             <div className="grid grid-cols-1 xl:grid-cols-[1fr_320px] gap-4 px-5">
                 <PerformanceChart />
                 <RecentSessions />
+            </div>
+
+            {/* Weekly Goals + Daily Tip */}
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 px-5">
+                <WeeklyGoals />
+                <DailyTip />
             </div>
         </section>
     );
