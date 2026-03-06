@@ -21,4 +21,28 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: inherit;
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #3d3f5c #1a1b2e;
+}
+
+/* WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1b2e;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3d3f5c;
+  border-radius: 999px;
+  transition: background 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
 }
