@@ -84,8 +84,6 @@ export default function QuestionCard({
                         style={{ width: `${progress}%` }}
                     />
             </div>
-```
-
             </div>
 
            
