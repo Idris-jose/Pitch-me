@@ -2,6 +2,9 @@
 import { useState } from "react";
 import { Monitor, Rocket, Brain } from "lucide-react";
 import QuestionCard from "@/app/components/InterviewMode/QuestionCard";
+import PrepTimer from "@/app/components/InterviewMode/PrepTimer";
+import RecordControl from "@/app/components/InterviewMode/RecordControl";
+import AudioStatus from "@/app/components/InterviewMode/AudioStatus";
 
 export default function InterviewMode() {
 
@@ -18,7 +21,7 @@ export default function InterviewMode() {
                 {/* Page header */}
                 <div className="flex items-center justify-between">
                     <div>
-                        <h1 className="text-3xl font-semibold">Interview Mode</h1>
+                        <h1 className="text-3xl font-semibold">Interview Simulator</h1>
                         <p className="text-sm text-[#9496a7]">Sharpen your pitch with AI-driven questions.</p>
                     </div>
                     <div className="flex gap-2">
@@ -39,6 +42,13 @@ export default function InterviewMode() {
                     total={5}
                     difficulty="Hard"
                 />
+
+                {/* Lower controls section */}
+                <div className="flex items-center justify-between w-full mt-2">
+                    <PrepTimer />
+                    <RecordControl />
+                    <AudioStatus />
+                </div>
             </main>
         </section>
     );
