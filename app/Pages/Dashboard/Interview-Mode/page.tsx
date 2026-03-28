@@ -16,7 +16,7 @@ export default function InterviewMode() {
 
     return (
         <section className="flex flex-col overflow-y-auto gap-6 p-5 bg-[#111022] min-h-screen pb-6">
-            <main className="flex flex-col gap-6 w-[896px]">
+            <main className="flex flex-col gap-6">
 
                 {/* Page header */}
                 <div className="flex items-center justify-between">

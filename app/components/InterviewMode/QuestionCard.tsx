@@ -32,7 +32,7 @@ export default function QuestionCard({
     const progress = Math.round((current / total) * 100);
 
     return (
-        <div className="relative w-[896px] h-[238px] justify-center items-center flex flex-col rounded-2xl bg-[#1A1933] border border-[#2a2745] overflow-hidden shadow-[inset_0_1px_2px_rgba(255,255,255,0.07)]">
+        <div className="relative w-full h-[238px] justify-center items-center flex flex-col rounded-2xl bg-[#1A1933] border border-[#2a2745] overflow-hidden shadow-[inset_0_1px_2px_rgba(255,255,255,0.07)]">
             {/* Main content row */}
             <div className="flex items-start gap-5 p-5">
                 {/* Icon block */}
