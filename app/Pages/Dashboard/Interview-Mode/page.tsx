@@ -19,14 +19,14 @@ export default function InterviewMode() {
             <main className="flex flex-col gap-6">
 
                 {/* Page header */}
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0">
                     <div>
-                        <h1 className="text-3xl font-semibold">Interview Simulator</h1>
-                        <p className="text-sm text-[#9496a7]">Sharpen your pitch with AI-driven questions.</p>
+                        <h1 className="text-2xl md:text-3xl font-semibold">Interview Simulator</h1>
+                        <p className="text-sm text-[#9496a7] mt-1">Sharpen your pitch with AI-driven questions.</p>
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex flex-wrap gap-2">
                         {modes.map((mode, index) => (
-                            <div key={index} className="flex items-center gap-2 bg-[#1A1933] px-2 py-1 rounded-full border border-[#242348]">
+                            <div key={index} className="flex items-center gap-2 bg-[#1A1933] px-3 py-1.5 rounded-full border border-[#242348]">
                                 <p>{mode.icon}</p>
                                 <p className="text-xs">{mode.title}</p>
                             </div>
