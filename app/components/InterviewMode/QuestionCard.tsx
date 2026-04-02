@@ -32,35 +32,35 @@ export default function QuestionCard({
     const progress = Math.round((current / total) * 100);
 
     return (
-        <div className="relative w-full h-[238px] justify-center items-center flex flex-col rounded-2xl bg-[#1A1933] border border-[#2a2745] overflow-hidden shadow-[inset_0_1px_2px_rgba(255,255,255,0.07)]">
+        <div className="relative w-full min-h-[238px] h-auto justify-center md:items-center flex flex-col rounded-2xl bg-[#1A1933] border border-[#2a2745] overflow-hidden shadow-[inset_0_1px_2px_rgba(255,255,255,0.07)]">
             {/* Main content row */}
-            <div className="flex items-start gap-5 p-5">
+            <div className="flex flex-col md:flex-row items-start gap-4 md:gap-5 p-4 md:p-5 w-full relative">
                 {/* Icon block */}
-                <div className="flex-none flex relative flex-col items-center gap-1.5">
-                    <div className="relative shadow-lg shadow-indigo-900/40 rotate-6 flex items-center justify-center w-[96px] h-[96px] rounded-xl bg-[#6366f1]">
-                        <User size={30} className="text-white" />
+                <div className="flex-none flex relative flex-col items-center gap-1.5 self-center md:self-start">
+                    <div className="relative shadow-lg shadow-indigo-900/40 rotate-6 flex items-center justify-center w-[72px] h-[72px] md:w-[96px] md:h-[96px] rounded-xl bg-[#6366f1]">
+                        <User size={30} className="text-white md:w-[30px] md:h-[30px] w-[24px] h-[24px]" />
                     </div>
                     {/* Difficulty pill */}
-                    <span className={`text-[10px] absolute bottom-1 right-1 font-semibold px-2 py-0.5 bg-[#1A1933] px-2 py-1 rounded-full border text-[#6366f1] `}>
+                    <span className={`text-[10px] absolute bottom-1 right-1 font-semibold bg-[#1A1933] px-2 py-0.5 md:py-1 rounded-full border text-[#6366f1] `}>
                         {difficulty}
                     </span>
                 </div>
 
                 {/* Text */}
-                <div className="flex-1 min-w-0">
+                <div className="flex-1 w-full min-w-0 text-center md:text-left mt-2 md:mt-0">
                     <p className="text-[11px] font-semibold tracking-widest text-indigo-400 uppercase mb-1.5">
                         Question {current} of {total}
                     </p>
-                    <h2 className="text-[30px] font-bold text-white leading-snug mb-2">
+                    <h2 className="text-xl md:text-[30px] font-bold text-white leading-snug mb-2 md:mb-4">
                         &ldquo;{question}&rdquo;
                     </h2>
                     {hint && (
-                        <p className="text-sm text-[#9496a7] leading-relaxed">{hint}</p>
+                        <p className="text-xs md:text-sm text-[#9496a7] leading-relaxed">{hint}</p>
                     )}
                 </div>
 
                 {/* Actions */}
-                <div className="flex-none flex items-center gap-2 pt-0.5">
+                <div className="flex-none flex items-center gap-2 pt-0.5 absolute right-4 top-4 md:relative md:right-auto md:top-auto">
                     <button
                         onClick={onRefresh}
                         className="p-1.5 rounded-lg text-[#6b6d82] hover:text-white hover:bg-white/5 transition-colors"
@@ -83,7 +83,7 @@ export default function QuestionCard({
                         className="h-full bg-[#6366f1] transition-all duration-500 ease-out"
                         style={{ width: `${progress}%` }}
                     />
-            </div>
+                </div>
             </div>
 
            

@@ -19,7 +19,7 @@ export default function Auth(){
                             <h1 className="text-[28px] font-bold mb-2 tracking-[-0.5px]">{isUser ? "Login to" :"Create"} your account</h1>
                             <p className="text-[14px] text-[#9496a7] mb-8">{isUser ? "Continue" : "Start"} your journey to better communication today.</p>
         
-                            <div className="bg-white/[0.02] border border-white/[0.08] rounded-2xl p-8 shadow-[0_8px_32px_rgba(0,0,0,0.2)]">
+                            <div className="bg-white/[0.02] border border-white/[0.08] rounded-2xl p-6 md:p-8 shadow-[0_8px_32px_rgba(0,0,0,0.2)]">
                                 <form>
                                     <div className="mb-5">
                                         <label htmlFor="email" className="block text-[13px] font-semibold text-[#e2e8f0] mb-2">Email Address</label>

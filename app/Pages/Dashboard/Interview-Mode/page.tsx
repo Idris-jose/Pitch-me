@@ -44,7 +44,7 @@ export default function InterviewMode() {
                 />
 
                 {/* Lower controls section */}
-                <div className="flex items-center justify-between w-full mt-2">
+                <div className="flex flex-col lg:flex-row items-center justify-between w-full mt-2 gap-6 lg:gap-4">
                     <PrepTimer />
                     <RecordControl />
                     <AudioStatus />
